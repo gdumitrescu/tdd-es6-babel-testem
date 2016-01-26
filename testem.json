@@ -1,0 +1,14 @@
+{
+  "framework": "jasmine2",
+  "launch_in_dev": ["PhantomJS"],
+  "launch_in_ci": ["PhantomJS"],
+  "before_tests": "babel src -d dist",
+  "on_exit": "rm -rf dist/*.js",
+  "src_files": [
+    "src/*.js"
+  ],
+  "serve_files": [
+    "dist/*.js",
+    "spec/*.js"
+  ]
+}

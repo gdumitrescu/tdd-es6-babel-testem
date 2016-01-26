@@ -1,0 +1,29 @@
+{
+  "name": "tdd-es6-babel-testem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "clean": "rm -rf dist/*.js",
+    "lint": "standard --format src/*.js",
+    "start": "testem",
+    "test": "testem ci",
+    "watch": "babel src -w -d dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-preset-es2015": "^6.3.13",
+    "standard": "^5.4.1"
+  }
+}
